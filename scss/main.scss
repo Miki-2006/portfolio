@@ -1,8 +1,8 @@
-@import "base";
-@import "components";
-@import "variables";
-@import "mixins";
-@import "fonts";
+@use "base";
+@use "components";
+@use "variables";
+@use "mixins";
+@use "fonts";
 
 body {
   margin: 0 auto;
@@ -16,18 +16,18 @@ body {
 
 .header {
   margin: 0 auto;
-  @include flexbox-style(auto, center, center);
+  @include mixins.flexbox-style(auto, center, center);
   max-width: 1440px;
   .container {
-    @include block-style(auto, 86px, 50px, 0 10px, 40px 70px, #171717);
-    @include flexbox-style(auto, space-between, center);
+    @include mixins.block-style(auto, 86px, 50px, 0 10px, 40px 70px, #171717);
+    @include mixins.flexbox-style(auto, space-between, center);
     backdrop-filter: blur(15px);
     a {
-      @include link-style(
-        $font-lufga,
+      @include mixins.link-style(
+        variables.$font-lufga,
         400,
         20px,
-        $font-white-color,
+        variables.$font-white-color,
         60px,
         20px 40px,
         136px
@@ -35,18 +35,18 @@ body {
     }
 
     .active {
-      background-color: $bg-orange-color;
+      background-color: variables.$bg-orange-color;
       font-weight: 700;
     }
 
     .logo {
-      @include flexbox-style(auto, space-between, center);
+      @include mixins.flexbox-style(auto, space-between, center);
       gap: 13px;
       img {
-        @include block-style(46px, 46px, 50px, auto, auto, auto);
+        @include mixins.block-style(46px, 46px, 50px, auto, auto, auto);
       }
       span {
-        @include font-style($font-glancyr, 900, 28px, $font-white-color);
+        @include mixins.font-style(variables.$font-glancyr, 900, 28px, variables.$font-white-color);
       }
     }
   }
@@ -57,26 +57,26 @@ main {
   margin: 0 auto;
   .hero {
     position: relative;
-    @include flexbox-style(column, space-between, stretch);
+    @include mixins.flexbox-style(column, space-between, stretch);
     height: fit-content;
 
     .container {
       padding: 37px 70px 0 70px;
       .hello {
-        @include flexbox-style(column, space-between, center);
+        @include mixins.flexbox-style(column, space-between, center);
         gap: 10px;
 
         .top {
           position: relative;
           span {
-            @include font-style($font-glancyr, 500, 20px, $font-black-color);
-            @include block-style(
+            @include mixins.font-style(variables.$font-glancyr, 500, 20px, variables.$font-black-color);
+            @include mixins.block-style(
               auto,
               auto,
               38px,
               12px 25px,
               0,
-              $bg-white-color
+              variables.$bg-white-color
             );
             border: 1.27px solid #171717;
             text-align: center;
@@ -91,14 +91,14 @@ main {
         .bottom {
           position: relative;
           h1 {
-            @include font-style($font-urbanist, 600, 95px, $font-black-color);
+            @include mixins.font-style(variables.$font-urbanist, 600, 95px, variables.$font-black-color);
             text-align: center;
             span {
-              @include font-style(
-                $font-urbanist,
+              @include mixins.font-style(
+                variables.$font-urbanist,
                 600,
                 95px,
-                $font-orange-color
+                variables.$font-orange-color
               );
             }
           }
@@ -119,37 +119,37 @@ main {
         align-items: center;
 
         .quote {
-          @include flexbox-style(column, space-between, baseline);
+          @include mixins.flexbox-style(column, space-between, baseline);
           gap: 24px;
           p {
-            @include font-style($font-glancyr, 500, 20px, #344054);
+            @include mixins.font-style(variables.$font-glancyr, 500, 20px, #344054);
           }
         }
 
         .experience {
-          @include flexbox-style(column, space-between, flex-end);
+          @include mixins.flexbox-style(column, space-between, flex-end);
           .stars {
             margin-bottom: 21px;
           }
           b {
-            @include font-style($font-urbanist, 700, 47px, $font-black-color);
+            @include mixins.font-style(variables.$font-urbanist, 700, 47px, variables.$font-black-color);
             margin-bottom: 5px;
           }
           span {
-            @include font-style($font-glancyr, 400, 20px, $font-black-color);
+            @include mixins.font-style(variables.$font-glancyr, 400, 20px, variables.$font-black-color);
           }
         }
 
         .image {
-          @include flexbox-style(column, center, center);
+          @include mixins.flexbox-style(column, center, center);
 
           .btn {
             position: absolute;
             border: 1px solid rgba(255, 255, 255, 0.5);
             gap: 5px;
             inset-block-start: 80%;
-            @include flexbox-style(row, center, center);
-            @include block-style(
+            @include mixins.flexbox-style(row, center, center);
+            @include mixins.block-style(
               max-content,
               auto,
               50px,
@@ -159,22 +159,22 @@ main {
             );
 
             button {
-              @include flexbox-style(row, center, center);
-              @include block-style(
+              @include mixins.flexbox-style(row, center, center);
+              @include mixins.block-style(
                 auto,
                 auto,
                 60px,
                 10px 20px,
                 0,
-                $bg-orange-color
+                variables.$bg-orange-color
               );
-              @include font-style($font-glancyr, 500, 25px, $font-white-color);
+              @include mixins.font-style(variables.$font-glancyr, 500, 25px, variables.$font-white-color);
               border: 0.5px solid #d0d5dd;
             }
 
             span {
               padding: 10px 20px;
-              @include font-style($font-glancyr, 300, 25px, $font-white-color);
+              @include mixins.font-style(variables.$font-glancyr, 300, 25px, variables.$font-white-color);
             }
           }
 
@@ -199,32 +199,32 @@ main {
     background-size: cover;
 
     .container {
-      @include flexbox-style(column, space-between, stretch);
+      @include mixins.flexbox-style(column, space-between, stretch);
       padding: 0 70px 51px 70px;
 
       .title {
-        @include flexbox-style(row, space-between, center);
+        @include mixins.flexbox-style(row, space-between, center);
         margin: 116px 0;
 
         span {
-          @include font-style($font-glancyr, 500, 48px, $font-smoke-color);
+          @include mixins.font-style(variables.$font-glancyr, 500, 48px, variables.$font-smoke-color);
           span {
-            @include font-style($font-glancyr, 500, 48px, $font-orange-color);
+            @include mixins.font-style(variables.$font-glancyr, 500, 48px, variables.$font-orange-color);
           }
         }
 
         p {
-          @include font-style($font-glancyr, 500, 20px, $font-white-color);
+          @include mixins.font-style(variables.$font-glancyr, 500, 20px, variables.$font-white-color);
         }
       }
 
       .cards {
-        @include flexbox-style(row, space-between, center);
+        @include mixins.flexbox-style(row, space-between, center);
         margin-bottom: 39px;
 
         .card {
           position: relative;
-          @include block-style(
+          @include mixins.block-style(
             auto,
             auto,
             35px,
@@ -235,7 +235,7 @@ main {
           border: 2px solid rgba(249, 250, 251, 0.3);
 
           span {
-            @include font-style($font-glancyr, 500, 32px, $font-white-color);
+            @include mixins.font-style(variables.$font-glancyr, 500, 32px, variables.$font-white-color);
             margin: 0 37px;
           }
 
@@ -260,7 +260,7 @@ main {
             padding: 20px 0 0 20px;
             background: #171717;
             svg {
-              @include block-style(auto, auto, 57px, 21px, auto, #1d2939);
+              @include mixins.block-style(auto, auto, 57px, 21px, auto, #1d2939);
             }
           }
         }
@@ -275,34 +275,34 @@ main {
   .experience {
     margin-bottom: 155px;
     .container {
-      @include flexbox-style(column, center, stretch);
+      @include mixins.flexbox-style(column, center, stretch);
       padding: 0 70px 51px 70px;
 
       .title {
-        @include font-style($font-glancyr, 500, 64px, $font-grey-color);
+        @include mixins.font-style(variables.$font-glancyr, 500, 64px, variables.$font-grey-color);
         margin-bottom: 85px;
         text-align: center;
         span {
-          color: $font-orange-color;
+          color: variables.$font-orange-color;
         }
       }
 
       div {
-        @include flexbox-style(row, space-between, stretch);
+        @include mixins.flexbox-style(row, space-between, stretch);
 
         span {
-          @include font-style($font-glancyr, 600, 40px, $font-grey-color);
+          @include mixins.font-style(variables.$font-glancyr, 600, 40px, variables.$font-grey-color);
         }
 
         div {
-          @include flexbox-style(column, flex-start, baseline);
+          @include mixins.flexbox-style(column, flex-start, baseline);
         }
 
         .col1 {
           gap: 102px;
 
           p {
-            @include font-style($font-glancyr, 400, 24px, #98a2b3);
+            @include mixins.font-style(variables.$font-glancyr, 400, 24px, #98a2b3);
           }
         }
 
@@ -310,7 +310,7 @@ main {
           gap: 65px;
 
           p {
-            @include font-style($font-glancyr, 500, 20px, #98a2b3);
+            @include mixins.font-style(variables.$font-glancyr, 500, 20px, #98a2b3);
           }
         }
       }
@@ -318,42 +318,42 @@ main {
   }
 
   .whyme {
-    background-color: $bg-smoke-color;
+    background-color: variables.$bg-smoke-color;
     border-radius: 50px;
 
     .container {
-      @include flexbox-style(row, center, stretch);
+      @include mixins.flexbox-style(row, center, stretch);
       padding: 80px 70px 103px 70px;
 
       .content {
-        @include flexbox-style(column, center, stretch);
+        @include mixins.flexbox-style(column, center, stretch);
         gap: 47px;
 
         .title {
-          @include font-style($font-glancyr, 600, 64px, $font-grey-color);
+          @include mixins.font-style(variables.$font-glancyr, 600, 64px, variables.$font-grey-color);
           span {
-            color: $font-orange-color;
+            color: variables.$font-orange-color;
           }
         }
 
         p {
-          @include font-style($font-glancyr, 400, 20px, #98a2b3);
+          @include mixins.font-style(variables.$font-glancyr, 400, 20px, #98a2b3);
         }
 
         .projects {
-          @include flexbox-style(row, space-between, center);
+          @include mixins.flexbox-style(row, space-between, center);
           span {
-            @include font-style($font-glancyr, 500, 36px, #1d2939);
+            @include mixins.font-style(variables.$font-glancyr, 500, 36px, #1d2939);
           }
           p {
-            @include font-style($font-glancyr, 400, 20px, #667085);
+            @include mixins.font-style(variables.$font-glancyr, 400, 20px, #667085);
           }
         }
 
         button {
-          @include block-style(auto, auto, 32px, 33px 59px, 0, $bg-smoke-color);
+          @include mixins.block-style(auto, auto, 32px, 33px 59px, 0, variables.$bg-smoke-color);
           border: 1px solid #151515;
-          @include font-style($font-glancyr, 600, 32px, #151515);
+          @include mixins.font-style(variables.$font-glancyr, 600, 32px, #151515);
           text-align: center;
           width: max-content;
         }
@@ -365,25 +365,25 @@ main {
     padding: 97px 70px;
     .container {
       .top {
-        @include flexbox-style(row, space-between, center);
+        @include mixins.flexbox-style(row, space-between, center);
 
         span {
-          @include font-style($font-glancyr, 600, 64px, $font-grey-color);
+          @include mixins.font-style(variables.$font-glancyr, 600, 64px, variables.$font-grey-color);
           span {
-            color: $font-orange-color;
+            color: variables.$font-orange-color;
           }
         }
         button {
           border-radius: 60px;
           border: none;
           padding: 20px 40px;
-          background-color: $bg-orange-color;
-          @include font-style($font-glancyr, 700, 20px, $font-white-color);
+          background-color: variables.$bg-orange-color;
+          @include mixins.font-style(variables.$font-glancyr, 700, 20px, variables.$font-white-color);
         }
       }
 
       .portfolios {
-        @include flexbox-style(column, space-between, stretch);
+        @include mixins.flexbox-style(column, space-between, stretch);
         margin: 48px 0;
 
         .cards {
@@ -392,7 +392,7 @@ main {
           gap: 24px;
 
           div {
-            @include flexbox-style(column, center, stretch);
+            @include mixins.flexbox-style(column, center, stretch);
             gap: 216px;
             border-radius: 20px;
             padding: 10px;
@@ -411,14 +411,14 @@ main {
               border: none;
               background: transparent;
               svg {
-                @include block-style(auto, auto, 60px, 15px, 0, transparent);
-                border: 1px solid $bg-orange-color;
+                @include mixins.block-style(auto, auto, 60px, 15px, 0, transparent);
+                border: 1px solid variables.$bg-orange-color;
                 margin: 0;
               }
             }
 
             span {
-              @include font-style($font-glancyr, 700, 70px, #fffaf5);
+              @include mixins.font-style(variables.$font-glancyr, 700, 70px, #fffaf5);
             }
           }
         }
@@ -429,42 +429,42 @@ main {
       }
 
       .categories {
-        @include flexbox-style(row, center, center);
+        @include mixins.flexbox-style(row, center, center);
         gap: 14px;
 
         span {
           border-radius: 25px;
           padding: 15px 32px;
-          background-color: $bg-smoke-color;
-          @include font-style($font-inter, 400, 20px, $font-black-color);
+          background-color: variables.$bg-smoke-color;
+          @include mixins.font-style(variables.$font-inter, 400, 20px, variables.$font-black-color);
         }
       }
 
       .text {
         margin-top: 48px;
-        @include flexbox-style(column, center, center);
+        @include mixins.flexbox-style(column, center, center);
         gap: 24px;
 
         .top {
-          @include flexbox-style(row, center, center);
+          @include mixins.flexbox-style(row, center, center);
           gap: 18px;
 
           span {
-            @include font-style($font-glancyr, 700, 48px, $font-grey-color);
+            @include mixins.font-style(variables.$font-glancyr, 700, 48px, variables.$font-grey-color);
           }
 
           button {
             border: none;
             border-radius: 60px;
             padding: 12px;
-            background-color: $bg-orange-color;
+            background-color: variables.$bg-orange-color;
             display: flex;
             align-items: center;
           }
         }
 
         p {
-          @include font-style($font-glancyr, 400, 20px, $font-grey-color);
+          @include mixins.font-style(variables.$font-glancyr, 400, 20px, variables.$font-grey-color);
           text-align: center;
         }
       }
@@ -480,20 +480,20 @@ main {
     border-radius: 50px;
 
     .container {
-      @include flexbox-style(column, center, center);
+      @include mixins.flexbox-style(column, center, center);
       gap: 96px;
 
       .text {
-        @include flexbox-style(column, center, center);
+        @include mixins.flexbox-style(column, center, center);
         gap: 14px;
 
         .title {
           position: relative;
-          @include font-style($font-glancyr, 500, 48px, $font-smoke-color);
+          @include mixins.font-style(variables.$font-glancyr, 500, 48px, variables.$font-smoke-color);
           text-align: center;
 
           span {
-            color: $font-orange-color;
+            color: variables.$font-orange-color;
           }
           svg {
             position: absolute;
@@ -503,7 +503,7 @@ main {
 
         .desc {
           text-align: center;
-          @include font-style($font-glancyr, 400, 20px, #f9fafb);
+          @include mixins.font-style(variables.$font-glancyr, 400, 20px, #f9fafb);
           position: relative;
 
           .star1 {
@@ -518,11 +518,11 @@ main {
       }
 
       .cards {
-        @include flexbox-style(row, center, center);
+        @include mixins.flexbox-style(row, center, center);
         gap: 24px;
 
         .card {
-          @include flexbox-style(column, center, center);
+          @include mixins.flexbox-style(column, center, center);
           gap: 14px;
           width: max-content;
           border-radius: 24px;
@@ -531,50 +531,50 @@ main {
           border: 0.5px solid silver;
 
           .top {
-            @include flexbox-style(row, center, center);
+            @include mixins.flexbox-style(row, center, center);
             gap: 419px;
 
             .info {
-              @include flexbox-style(column, center, flex-start);
+              @include mixins.flexbox-style(column, center, flex-start);
               gap: 14px;
 
               .title {
-                @include flexbox-style(row, center, center);
+                @include mixins.flexbox-style(row, center, center);
                 gap: 12px;
 
                 .name {
-                  @include flexbox-style(column, center, baseline);
+                  @include mixins.flexbox-style(column, center, baseline);
                   span {
-                    @include font-style(
-                      $font-urbanist,
+                    @include mixins.font-style(
+                      variables.$font-urbanist,
                       700,
                       23px,
-                      $font-smoke-color
+                      variables.$font-smoke-color
                     );
                   }
                   p {
-                    @include font-style(
-                      $font-urbanist,
+                    @include mixins.font-style(
+                      variables.$font-urbanist,
                       400,
                       18px,
-                      $font-smoke-color
+                      variables.$font-smoke-color
                     );
                   }
                 }
               }
 
               .stars {
-                @include flexbox-style(row, center, baseline);
+                @include mixins.flexbox-style(row, center, baseline);
                 gap: 5px;
                 div {
-                  @include flexbox-style(row, center, center);
+                  @include mixins.flexbox-style(row, center, center);
                 }
                 span {
-                  @include font-style(
-                    $font-glancyr,
+                  @include mixins.font-style(
+                    variables.$font-glancyr,
                     500,
                     25px,
-                    $font-smoke-color
+                    variables.$font-smoke-color
                   );
                 }
               }
@@ -582,7 +582,7 @@ main {
           }
 
           p {
-            @include font-style($font-glancyr, 400, 20px, #f9fafb);
+            @include mixins.font-style(variables.$font-glancyr, 400, 20px, #f9fafb);
           }
         }
       }
@@ -592,20 +592,20 @@ main {
   .discuss {
     .container {
       .top {
-        @include flexbox-style(column, stretch, center);
+        @include mixins.flexbox-style(column, stretch, center);
         gap: 10px;
         padding: 98px 0;
 
         .title {
-          @include font-style($font-glancyr, 600, 64px, $font-grey-color);
+          @include mixins.font-style(variables.$font-glancyr, 600, 64px, variables.$font-grey-color);
           text-align: center;
           span {
-            color: $font-orange-color;
+            color: variables.$font-orange-color;
           }
         }
 
         .input {
-          @include flexbox-style(row, stretch, center);
+          @include mixins.flexbox-style(row, stretch, center);
           border: 1px solid #e4e7ec;
           border-radius: 50px;
           padding: 14px;
@@ -623,29 +623,29 @@ main {
 
           input {
             border: none;
-            @include font-style($font-urbanist, 500, 20px, $font-black-color);
+            @include mixins.font-style(variables.$font-urbanist, 500, 20px, variables.$font-black-color);
             width: 650px;
           }
 
           button {
             border-radius: 60px;
             padding: 20px 40px;
-            background-color: $bg-orange-color;
+            background-color: variables.$bg-orange-color;
             border: none;
-            @include font-style($font-urbanist, 500, 20px, $font-white-color);
+            @include mixins.font-style(variables.$font-urbanist, 500, 20px, variables.$font-white-color);
           }
         }
 
         .awards {
-          @include flexbox-style(row, center, center);
+          @include mixins.flexbox-style(row, center, center);
           gap: 93px;
 
           div {
-            @include flexbox-style(row, flex-start, flex-end);
+            @include mixins.flexbox-style(row, flex-start, flex-end);
             gap: 5px;
 
             span {
-              @include font-style($font-glancyr, 400, 16px, $font-black-color);
+              @include mixins.font-style(variables.$font-glancyr, 400, 16px, variables.$font-black-color);
             }
           }
         }
@@ -657,13 +657,13 @@ main {
         padding: 36px 0;
 
         .content {
-          @include flexbox-style(row, center, center);
+          @include mixins.flexbox-style(row, center, center);
           padding: 12px 0;
           gap: 12px;
-          background-color: $bg-white-color;
+          background-color: variables.$bg-white-color;
           transform: rotate(-2deg);
           span {
-            @include font-style($font-glancyr, 400, 48px, $font-black-color);
+            @include mixins.font-style(variables.$font-glancyr, 400, 48px, variables.$font-black-color);
           }
         }
       }
@@ -673,30 +673,30 @@ main {
   .posts {
     padding: 97px 70px;
     .container {
-      @include flexbox-style(column, center, stretch);
+      @include mixins.flexbox-style(column, center, stretch);
       gap: 48px;
 
       .top {
-        @include flexbox-style(row, space-between, center);
+        @include mixins.flexbox-style(row, space-between, center);
 
         b {
-          @include font-style($font-glancyr, 700, 48px, $font-grey-color);
+          @include mixins.font-style(variables.$font-glancyr, 700, 48px, variables.$font-grey-color);
         }
         button {
           border-radius: 60px;
           padding: 20px 40px;
           border: none;
-          background-color: $bg-orange-color;
-          @include font-style($font-glancyr, 700, 20px, $font-white-color);
+          background-color: variables.$bg-orange-color;
+          @include mixins.font-style(variables.$font-glancyr, 700, 20px, variables.$font-white-color);
         }
       }
 
       .cards {
-        @include flexbox-style(row, stretch, stretch);
+        @include mixins.flexbox-style(row, stretch, stretch);
         gap: 25px;
 
         .card {
-          @include flexbox-style(column, stretch, baseline);
+          @include mixins.flexbox-style(column, stretch, baseline);
           gap: 35px;
 
           .img {
@@ -709,7 +709,7 @@ main {
               border: none;
               background: transparent;
               svg {
-                @include block-style(auto, auto, 57px, 21px, auto, #1d2939);
+                @include mixins.block-style(auto, auto, 57px, 21px, auto, #1d2939);
               }
             }
           }
@@ -718,22 +718,22 @@ main {
             border-radius: 24px;
             padding: 15px 32px;
             background-color: #f2f4f7;
-            @include font-style($font-inter, 400, 20px, $font-black-color);
+            @include mixins.font-style(variables.$font-inter, 400, 20px, variables.$font-black-color);
           }
 
           .info{
-            @include flexbox-style(row, space-between, center);
+            @include mixins.flexbox-style(row, space-between, center);
             gap: 35px;
 
             div{
-              @include flexbox-style(row, space-between, center);
-              @include font-style($font-inter, 400, 20px, $font-grey-color);
+              @include mixins.flexbox-style(row, space-between, center);
+              @include mixins.font-style(variables.$font-inter, 400, 20px, variables.$font-grey-color);
               gap: 10px;
             }
           }
 
           .title{
-            @include font-style($font-glancyr, 400, 32px, $font-grey-color);
+            @include mixins.font-style(variables.$font-glancyr, 400, 32px, variables.$font-grey-color);
           }
         }
       }
@@ -742,27 +742,27 @@ main {
 }
 
 footer {
-  @include block-style(auto, auto, 24px 24px 0 0, 25px 70px, 0 auto, #272727);
+  @include mixins.block-style(auto, auto, 24px 24px 0 0, 25px 70px, 0 auto, #272727);
   max-height: 685px;
   max-width: 1440px;
 
   .container {
-    @include flexbox-style(column, space-between, auto);
+    @include mixins.flexbox-style(column, space-between, auto);
     .hire {
       margin: 44px 0;
-      @include flexbox-style(row, space-between, center);
+      @include mixins.flexbox-style(row, space-between, center);
       span {
-        @include font-style($font-lufga, 600, 64px, $font-smoke-color);
+        @include mixins.font-style(variables.$font-lufga, 600, 64px, variables.$font-smoke-color);
       }
       a {
-        background-color: $bg-orange-color;
+        background-color: variables.$bg-orange-color;
         width: max-content;
-        @include flexbox-style(row, center, center);
-        @include link-style(
-          $font-lufga,
+        @include mixins.flexbox-style(row, center, center);
+        @include mixins.link-style(
+          variables.$font-lufga,
           500,
           25px,
-          $font-white-color,
+          variables.$font-white-color,
           60px,
           10px 20px,
           auto
@@ -775,81 +775,81 @@ footer {
     }
 
     .middle {
-      @include block-style(auto, 239px, auto, auto, 55px 0, auto);
-      @include flexbox-style(auto, space-between, auto);
+      @include mixins.block-style(auto, 239px, auto, auto, 55px 0, auto);
+      @include mixins.flexbox-style(auto, space-between, auto);
       .col1 {
-        @include flexbox-style(column, space-between, baseline);
+        @include mixins.flexbox-style(column, space-between, baseline);
         .logo {
-          @include flexbox-style(auto, auto, center);
+          @include mixins.flexbox-style(auto, auto, center);
           gap: 13px;
           img {
-            @include block-style(46px, 46px, 50px, auto, auto, auto);
+            @include mixins.block-style(46px, 46px, 50px, auto, auto, auto);
           }
           span {
-            @include font-style($font-glancyr, 900, 28px, $font-white-color);
+            @include mixins.font-style(variables.$font-glancyr, 900, 28px, variables.$font-white-color);
           }
         }
 
         p {
-          @include font-style($font-glancyr, 400, 20px, $font-smoke-color);
+          @include mixins.font-style(variables.$font-glancyr, 400, 20px, variables.$font-smoke-color);
         }
 
         .icons {
-          @include flexbox-style(auto, auto, center);
+          @include mixins.flexbox-style(auto, auto, center);
           width: 24px;
           height: 24px;
           gap: 5px;
         }
       }
       .col2 {
-        @include flexbox-style(column, space-between, baseline);
+        @include mixins.flexbox-style(column, space-between, baseline);
         b {
-          @include font-style($font-glancyr, 600, 20px, $font-orange-color);
+          @include mixins.font-style(variables.$font-glancyr, 600, 20px, variables.$font-orange-color);
         }
         a {
-          @include font-style($font-glancyr, 400, 16px, $font-smoke-color);
+          @include mixins.font-style(variables.$font-glancyr, 400, 16px, variables.$font-smoke-color);
           text-decoration: none;
         }
       }
       .col3 {
-        @include flexbox-style(column, space-between, baseline);
+        @include mixins.flexbox-style(column, space-between, baseline);
         height: 157px;
         b {
-          @include font-style($font-glancyr, 600, 20px, $font-orange-color);
+          @include mixins.font-style(variables.$font-glancyr, 600, 20px, variables.$font-orange-color);
         }
         a {
-          @include font-style($font-glancyr, 400, 16px, $font-smoke-color);
+          @include mixins.font-style(variables.$font-glancyr, 400, 16px, variables.$font-smoke-color);
           text-decoration: none;
         }
       }
       .col4 {
-        @include flexbox-style(column, space-between, baseline);
+        @include mixins.flexbox-style(column, space-between, baseline);
         height: 105px;
         b {
-          @include font-style($font-glancyr, 600, 20px, $font-orange-color);
+          @include mixins.font-style(variables.$font-glancyr, 600, 20px, variables.$font-orange-color);
         }
         form {
-          @include flexbox-style(auto, auto, center);
-          @include block-style(304px, 51px, auto, auto, auto, auto);
+          @include mixins.flexbox-style(auto, auto, center);
+          @include mixins.block-style(304px, 51px, auto, auto, auto, auto);
           input {
-            @include block-style(
+            @include mixins.block-style(
               max-content,
               auto,
               14px 0 0 14px,
               16px 14px,
               0,
-              $bg-white-color
+              variables.$bg-white-color
             );
             border: none;
           }
           button {
-            @include block-style(
+            @include mixins.block-style(
               auto,
               auto,
               0 14px 14px 0,
               10px 8px,
               0,
-              $bg-orange-color
+              variables.$bg-orange-color
             );
             border: none;
           }
@@ -858,8 +858,8 @@ footer {
     }
 
     .bottom {
-      @include flexbox-style(auto, space-between, center);
-      @include font-style($font-glancyr, 400, 20px, $font-white-color);
+      @include mixins.flexbox-style(auto, space-between, center);
+      @include mixins.font-style(variables.$font-glancyr, 400, 20px, variables.$font-white-color);
       margin: 55px 0 0 0;
     }
   }
