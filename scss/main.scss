@@ -42,11 +42,12 @@ body {
     .logo {
       @include mixins.flexbox-style(auto, space-between, center);
       gap: 13px;
-      img {
-        @include mixins.block-style(46px, 46px, 50px, auto, auto, auto);
-      }
-      span {
-        @include mixins.font-style(variables.$font-glancyr, 900, 28px, variables.$font-white-color);
+
+      .img {
+        background-color: #fd853a;
+        padding: 13px 8px;
+        border-radius: 50px;
+        @include mixins.flexbox-style(auto, center, center);
       }
     }
   }
@@ -69,7 +70,12 @@ main {
         .top {
           position: relative;
           span {
-            @include mixins.font-style(variables.$font-glancyr, 500, 20px, variables.$font-black-color);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              500,
+              20px,
+              variables.$font-black-color
+            );
             @include mixins.block-style(
               auto,
               auto,
@@ -91,7 +97,12 @@ main {
         .bottom {
           position: relative;
           h1 {
-            @include mixins.font-style(variables.$font-urbanist, 600, 95px, variables.$font-black-color);
+            @include mixins.font-style(
+              variables.$font-urbanist,
+              600,
+              95px,
+              variables.$font-black-color
+            );
             text-align: center;
             span {
               @include mixins.font-style(
@@ -122,21 +133,36 @@ main {
           @include mixins.flexbox-style(column, space-between, baseline);
           gap: 24px;
           p {
-            @include mixins.font-style(variables.$font-glancyr, 500, 20px, #344054);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              500,
+              20px,
+              #344054
+            );
           }
         }
 
-        .experience {
+        .experiences {
           @include mixins.flexbox-style(column, space-between, flex-end);
           .stars {
             margin-bottom: 21px;
           }
           b {
-            @include mixins.font-style(variables.$font-urbanist, 700, 47px, variables.$font-black-color);
+            @include mixins.font-style(
+              variables.$font-urbanist,
+              700,
+              47px,
+              variables.$font-black-color
+            );
             margin-bottom: 5px;
           }
           span {
-            @include mixins.font-style(variables.$font-glancyr, 400, 20px, variables.$font-black-color);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              400,
+              20px,
+              variables.$font-black-color
+            );
           }
         }
 
@@ -168,13 +194,23 @@ main {
                 0,
                 variables.$bg-orange-color
               );
-              @include mixins.font-style(variables.$font-glancyr, 500, 25px, variables.$font-white-color);
+              @include mixins.font-style(
+                variables.$font-glancyr,
+                500,
+                25px,
+                variables.$font-white-color
+              );
               border: 0.5px solid #d0d5dd;
             }
 
             span {
               padding: 10px 20px;
-              @include mixins.font-style(variables.$font-glancyr, 300, 25px, variables.$font-white-color);
+              @include mixins.font-style(
+                variables.$font-glancyr,
+                300,
+                25px,
+                variables.$font-white-color
+              );
             }
           }
 
@@ -207,14 +243,29 @@ main {
         margin: 116px 0;
 
         span {
-          @include mixins.font-style(variables.$font-glancyr, 500, 48px, variables.$font-smoke-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            500,
+            48px,
+            variables.$font-smoke-color
+          );
           span {
-            @include mixins.font-style(variables.$font-glancyr, 500, 48px, variables.$font-orange-color);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              500,
+              48px,
+              variables.$font-orange-color
+            );
           }
         }
 
         p {
-          @include mixins.font-style(variables.$font-glancyr, 500, 20px, variables.$font-white-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            500,
+            20px,
+            variables.$font-white-color
+          );
         }
       }
 
@@ -235,7 +286,12 @@ main {
           border: 2px solid rgba(249, 250, 251, 0.3);
 
           span {
-            @include mixins.font-style(variables.$font-glancyr, 500, 32px, variables.$font-white-color);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              500,
+              32px,
+              variables.$font-white-color
+            );
             margin: 0 37px;
           }
 
@@ -260,7 +316,14 @@ main {
             padding: 20px 0 0 20px;
             background: #171717;
             svg {
-              @include mixins.block-style(auto, auto, 57px, 21px, auto, #1d2939);
+              @include mixins.block-style(
+                auto,
+                auto,
+                57px,
+                21px,
+                auto,
+                #1d2939
+              );
             }
           }
         }
@@ -279,7 +342,12 @@ main {
       padding: 0 70px 51px 70px;
 
       .title {
-        @include mixins.font-style(variables.$font-glancyr, 500, 64px, variables.$font-grey-color);
+        @include mixins.font-style(
+          variables.$font-glancyr,
+          500,
+          64px,
+          variables.$font-grey-color
+        );
         margin-bottom: 85px;
         text-align: center;
         span {
@@ -291,7 +359,12 @@ main {
         @include mixins.flexbox-style(row, space-between, stretch);
 
         span {
-          @include mixins.font-style(variables.$font-glancyr, 600, 40px, variables.$font-grey-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            600,
+            40px,
+            variables.$font-grey-color
+          );
         }
 
         div {
@@ -302,7 +375,12 @@ main {
           gap: 102px;
 
           p {
-            @include mixins.font-style(variables.$font-glancyr, 400, 24px, #98a2b3);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              400,
+              24px,
+              #98a2b3
+            );
           }
         }
 
@@ -310,7 +388,12 @@ main {
           gap: 65px;
 
           p {
-            @include mixins.font-style(variables.$font-glancyr, 500, 20px, #98a2b3);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              500,
+              20px,
+              #98a2b3
+            );
           }
         }
       }
@@ -330,30 +413,62 @@ main {
         gap: 47px;
 
         .title {
-          @include mixins.font-style(variables.$font-glancyr, 600, 64px, variables.$font-grey-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            600,
+            64px,
+            variables.$font-grey-color
+          );
           span {
             color: variables.$font-orange-color;
           }
         }
 
         p {
-          @include mixins.font-style(variables.$font-glancyr, 400, 20px, #98a2b3);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            400,
+            20px,
+            #98a2b3
+          );
         }
 
         .projects {
           @include mixins.flexbox-style(row, space-between, center);
           span {
-            @include mixins.font-style(variables.$font-glancyr, 500, 36px, #1d2939);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              500,
+              36px,
+              #1d2939
+            );
           }
           p {
-            @include mixins.font-style(variables.$font-glancyr, 400, 20px, #667085);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              400,
+              20px,
+              #667085
+            );
           }
         }
 
         button {
-          @include mixins.block-style(auto, auto, 32px, 33px 59px, 0, variables.$bg-smoke-color);
+          @include mixins.block-style(
+            auto,
+            auto,
+            32px,
+            33px 59px,
+            0,
+            variables.$bg-smoke-color
+          );
           border: 1px solid #151515;
-          @include mixins.font-style(variables.$font-glancyr, 600, 32px, #151515);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            600,
+            32px,
+            #151515
+          );
           text-align: center;
           width: max-content;
         }
@@ -368,7 +483,12 @@ main {
         @include mixins.flexbox-style(row, space-between, center);
 
         span {
-          @include mixins.font-style(variables.$font-glancyr, 600, 64px, variables.$font-grey-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            600,
+            64px,
+            variables.$font-grey-color
+          );
           span {
             color: variables.$font-orange-color;
           }
@@ -378,7 +498,12 @@ main {
           border: none;
           padding: 20px 40px;
           background-color: variables.$bg-orange-color;
-          @include mixins.font-style(variables.$font-glancyr, 700, 20px, variables.$font-white-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            700,
+            20px,
+            variables.$font-white-color
+          );
         }
       }
 
@@ -396,7 +521,8 @@ main {
             gap: 216px;
             border-radius: 20px;
             padding: 10px;
-            background: linear-gradient(
+            background:
+              linear-gradient(
                 rgba(0, 0, 0, 0) 44%,
                 rgba(0, 0, 0, 0.25) 83%,
                 rgba(0, 0, 0, 0.5) 100%
@@ -411,14 +537,26 @@ main {
               border: none;
               background: transparent;
               svg {
-                @include mixins.block-style(auto, auto, 60px, 15px, 0, transparent);
+                @include mixins.block-style(
+                  auto,
+                  auto,
+                  60px,
+                  15px,
+                  0,
+                  transparent
+                );
                 border: 1px solid variables.$bg-orange-color;
                 margin: 0;
               }
             }
 
             span {
-              @include mixins.font-style(variables.$font-glancyr, 700, 70px, #fffaf5);
+              @include mixins.font-style(
+                variables.$font-glancyr,
+                700,
+                70px,
+                #fffaf5
+              );
             }
           }
         }
@@ -436,7 +574,12 @@ main {
           border-radius: 25px;
           padding: 15px 32px;
           background-color: variables.$bg-smoke-color;
-          @include mixins.font-style(variables.$font-inter, 400, 20px, variables.$font-black-color);
+          @include mixins.font-style(
+            variables.$font-inter,
+            400,
+            20px,
+            variables.$font-black-color
+          );
         }
       }
 
@@ -450,7 +593,12 @@ main {
           gap: 18px;
 
           span {
-            @include mixins.font-style(variables.$font-glancyr, 700, 48px, variables.$font-grey-color);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              700,
+              48px,
+              variables.$font-grey-color
+            );
           }
 
           button {
@@ -464,7 +612,12 @@ main {
         }
 
         p {
-          @include mixins.font-style(variables.$font-glancyr, 400, 20px, variables.$font-grey-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            400,
+            20px,
+            variables.$font-grey-color
+          );
           text-align: center;
         }
       }
@@ -472,7 +625,8 @@ main {
   }
 
   .testimonials {
-    background: linear-gradient(rgba(0, 0, 0, 0.75)),
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.75)),
       url("../public/abstract-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -489,7 +643,12 @@ main {
 
         .title {
           position: relative;
-          @include mixins.font-style(variables.$font-glancyr, 500, 48px, variables.$font-smoke-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            500,
+            48px,
+            variables.$font-smoke-color
+          );
           text-align: center;
 
           span {
@@ -503,7 +662,12 @@ main {
 
         .desc {
           text-align: center;
-          @include mixins.font-style(variables.$font-glancyr, 400, 20px, #f9fafb);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            400,
+            20px,
+            #f9fafb
+          );
           position: relative;
 
           .star1 {
@@ -582,7 +746,12 @@ main {
           }
 
           p {
-            @include mixins.font-style(variables.$font-glancyr, 400, 20px, #f9fafb);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              400,
+              20px,
+              #f9fafb
+            );
           }
         }
       }
@@ -597,7 +766,12 @@ main {
         padding: 98px 0;
 
         .title {
-          @include mixins.font-style(variables.$font-glancyr, 600, 64px, variables.$font-grey-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            600,
+            64px,
+            variables.$font-grey-color
+          );
           text-align: center;
           span {
             color: variables.$font-orange-color;
@@ -623,7 +797,12 @@ main {
 
           input {
             border: none;
-            @include mixins.font-style(variables.$font-urbanist, 500, 20px, variables.$font-black-color);
+            @include mixins.font-style(
+              variables.$font-urbanist,
+              500,
+              20px,
+              variables.$font-black-color
+            );
             width: 650px;
           }
 
@@ -632,7 +811,12 @@ main {
             padding: 20px 40px;
             background-color: variables.$bg-orange-color;
             border: none;
-            @include mixins.font-style(variables.$font-urbanist, 500, 20px, variables.$font-white-color);
+            @include mixins.font-style(
+              variables.$font-urbanist,
+              500,
+              20px,
+              variables.$font-white-color
+            );
           }
         }
 
@@ -645,7 +829,12 @@ main {
             gap: 5px;
 
             span {
-              @include mixins.font-style(variables.$font-glancyr, 400, 16px, variables.$font-black-color);
+              @include mixins.font-style(
+                variables.$font-glancyr,
+                400,
+                16px,
+                variables.$font-black-color
+              );
             }
           }
         }
@@ -663,7 +852,12 @@ main {
           background-color: variables.$bg-white-color;
           transform: rotate(-2deg);
           span {
-            @include mixins.font-style(variables.$font-glancyr, 400, 48px, variables.$font-black-color);
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              400,
+              48px,
+              variables.$font-black-color
+            );
           }
         }
       }
@@ -680,14 +874,24 @@ main {
         @include mixins.flexbox-style(row, space-between, center);
 
         b {
-          @include mixins.font-style(variables.$font-glancyr, 700, 48px, variables.$font-grey-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            700,
+            48px,
+            variables.$font-grey-color
+          );
         }
         button {
           border-radius: 60px;
           padding: 20px 40px;
           border: none;
           background-color: variables.$bg-orange-color;
-          @include mixins.font-style(variables.$font-glancyr, 700, 20px, variables.$font-white-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            700,
+            20px,
+            variables.$font-white-color
+          );
         }
       }
 
@@ -709,31 +913,53 @@ main {
               border: none;
               background: transparent;
               svg {
-                @include mixins.block-style(auto, auto, 57px, 21px, auto, #1d2939);
+                @include mixins.block-style(
+                  auto,
+                  auto,
+                  57px,
+                  21px,
+                  auto,
+                  #1d2939
+                );
               }
             }
           }
 
-          .theme{
+          .theme {
             border-radius: 24px;
             padding: 15px 32px;
             background-color: #f2f4f7;
-            @include mixins.font-style(variables.$font-inter, 400, 20px, variables.$font-black-color);
+            @include mixins.font-style(
+              variables.$font-inter,
+              400,
+              20px,
+              variables.$font-black-color
+            );
           }
 
-          .info{
+          .info {
             @include mixins.flexbox-style(row, space-between, center);
             gap: 35px;
 
-            div{
+            div {
               @include mixins.flexbox-style(row, space-between, center);
-              @include mixins.font-style(variables.$font-inter, 400, 20px, variables.$font-grey-color);
+              @include mixins.font-style(
+                variables.$font-inter,
+                400,
+                20px,
+                variables.$font-grey-color
+              );
               gap: 10px;
             }
           }
 
-          .title{
-            @include mixins.font-style(variables.$font-glancyr, 400, 32px, variables.$font-grey-color);
+          .title {
+            @include mixins.font-style(
+              variables.$font-glancyr,
+              400,
+              32px,
+              variables.$font-grey-color
+            );
           }
         }
       }
@@ -742,7 +968,14 @@ main {
 }
 
 footer {
-  @include mixins.block-style(auto, auto, 24px 24px 0 0, 25px 70px, 0 auto, #272727);
+  @include mixins.block-style(
+    auto,
+    auto,
+    24px 24px 0 0,
+    25px 70px,
+    0 auto,
+    #272727
+  );
   max-height: 685px;
   max-width: 1440px;
 
@@ -752,7 +985,12 @@ footer {
       margin: 44px 0;
       @include mixins.flexbox-style(row, space-between, center);
       span {
-        @include mixins.font-style(variables.$font-lufga, 600, 64px, variables.$font-smoke-color);
+        @include mixins.font-style(
+          variables.$font-lufga,
+          600,
+          64px,
+          variables.$font-smoke-color
+        );
       }
       a {
         background-color: variables.$bg-orange-color;
@@ -782,16 +1020,22 @@ footer {
         .logo {
           @include mixins.flexbox-style(auto, auto, center);
           gap: 13px;
-          img {
-            @include mixins.block-style(46px, 46px, 50px, auto, auto, auto);
-          }
-          span {
-            @include mixins.font-style(variables.$font-glancyr, 900, 28px, variables.$font-white-color);
+
+          .img {
+            background-color: #fd853a;
+            padding: 13px 8px;
+            border-radius: 50px;
+            @include mixins.flexbox-style(auto, center, center);
           }
         }
 
         p {
-          @include mixins.font-style(variables.$font-glancyr, 400, 20px, variables.$font-smoke-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            400,
+            20px,
+            variables.$font-smoke-color
+          );
         }
 
         .icons {
@@ -799,15 +1043,31 @@ footer {
           width: 24px;
           height: 24px;
           gap: 5px;
+          a {
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
         }
       }
       .col2 {
         @include mixins.flexbox-style(column, space-between, baseline);
         b {
-          @include mixins.font-style(variables.$font-glancyr, 600, 20px, variables.$font-orange-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            600,
+            20px,
+            variables.$font-orange-color
+          );
         }
         a {
-          @include mixins.font-style(variables.$font-glancyr, 400, 16px, variables.$font-smoke-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            400,
+            16px,
+            variables.$font-smoke-color
+          );
           text-decoration: none;
         }
       }
@@ -815,10 +1075,20 @@ footer {
         @include mixins.flexbox-style(column, space-between, baseline);
         height: 157px;
         b {
-          @include mixins.font-style(variables.$font-glancyr, 600, 20px, variables.$font-orange-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            600,
+            20px,
+            variables.$font-orange-color
+          );
         }
         a {
-          @include mixins.font-style(variables.$font-glancyr, 400, 16px, variables.$font-smoke-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            400,
+            16px,
+            variables.$font-smoke-color
+          );
           text-decoration: none;
         }
       }
@@ -826,7 +1096,12 @@ footer {
         @include mixins.flexbox-style(column, space-between, baseline);
         height: 105px;
         b {
-          @include mixins.font-style(variables.$font-glancyr, 600, 20px, variables.$font-orange-color);
+          @include mixins.font-style(
+            variables.$font-glancyr,
+            600,
+            20px,
+            variables.$font-orange-color
+          );
         }
         form {
           @include mixins.flexbox-style(auto, auto, center);
@@ -859,7 +1134,12 @@ footer {
 
     .bottom {
       @include mixins.flexbox-style(auto, space-between, center);
-      @include mixins.font-style(variables.$font-glancyr, 400, 20px, variables.$font-white-color);
+      @include mixins.font-style(
+        variables.$font-glancyr,
+        400,
+        20px,
+        variables.$font-white-color
+      );
       margin: 55px 0 0 0;
     }
   }
