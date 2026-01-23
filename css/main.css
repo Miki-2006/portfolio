@@ -871,39 +871,65 @@ main .services .container .cards {
 }
 main .services .container .cards .card {
   position: relative;
-  width: auto;
-  height: auto;
+}
+main .services .container .cards .card .content {
+  border: 2px solid rgba(249, 250, 251, 0.3);
+  clip-path: path("M 0,0 L 416,0 L 416,339 A 35,35 0,0,1 381,374 L 342,374 A 70,70 0,0,0 282,444 L 282,473 A 35,35 0,0,1 247,508 L 0,508 L 0,0 Z");
+  display: grid;
+  grid-template-rows: auto 1fr;
+  position: relative;
+  width: 416px;
+  height: 508px;
   border-radius: 35px;
-  padding: 44px 0 0 0;
+  padding: 0;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(249, 250, 251, 0.3);
 }
-main .services .container .cards .card span {
+main .services .container .cards .card .content .span {
   font-family: "Glancyr", sans-serif;
   font-weight: 500;
   font-size: 32px;
   color: white;
-  margin: 0 37px;
+  margin: 0 0 49px 0;
+  padding: 44px 37px 23px 37px;
+  border-bottom: 2px solid rgba(249, 250, 251, 0.3);
 }
-main .services .container .cards .card hr {
-  margin: 23px 0 49px 0;
-  height: 2px;
-  border: none;
-  background-color: rgba(249, 250, 251, 0.3);
+main .services .container .cards .card .content .imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
 }
-main .services .container .cards .card img {
+main .services .container .cards .card .content .imgs .back1 {
+  position: absolute;
+  border-radius: 35px;
+  width: 328px;
+  height: 351px;
+  opacity: 0.5;
+  background-color: #757575;
+}
+main .services .container .cards .card .content .imgs .back2 {
+  position: absolute;
+  border-radius: 35px;
+  width: 374px;
+  height: 329px;
+  background-color: #9e9d9d;
+}
+main .services .container .cards .card .content .imgs img {
+  position: absolute;
   border-radius: 35px;
   height: 307px;
 }
 main .services .container .cards .card button {
   position: absolute;
-  top: 71%;
-  left: 69%;
+  z-index: 1;
+  top: 73%;
+  left: 68%;
   border: none;
   border-radius: 75px 0 0 0;
   padding: 20px 0 0 20px;
-  background: #171717;
+  background: rgba(23, 23, 23, 0);
 }
 main .services .container .cards .card button svg {
   width: auto;
